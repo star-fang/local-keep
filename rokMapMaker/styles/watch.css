@@ -1,0 +1,16 @@
+.base-watch {
+  width: 150px;
+  overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgba(14, 14, 14, 0.8);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 29;
+  }
+
+ 

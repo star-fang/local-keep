@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rok-Awakening</title>
+  <style> 
+    .edittext {
+      border: none;
+      background: rgba(65, 105, 225, 0.349);
+    }
+  </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br><label for="edittext_before">전: </label>
+    <input class="edittext" type="text" id="edittext_before" name="before">
+    <br><label for="edittext_after">후: </label>
+    <input class="edittext" type="text" id="edittext_after" name="after">
+
+    <br>
+    <input type="button" id="button" name="돌려">
+
+
+    <br><br><p id="result"></p>
+  <script type="text/javascript">
+
+window.onload = function() {
+
+
+
+$('#button').on('click',function(){
+
+    const before = $('#edittext_before').val();
+
+    const after = $('#edittext_after').val();
+
+    var fulfilled_init = [];
+    var before_array_init = [];
+    var after_array = [];
+    var before_sum_init = 0;
+    var after_sum = 0;
+    const total_try = 1000000;
+
+    for( var i = 0; i < 4; i++ ) {
+        before_array_init[i] = Math.floor( before / Math.pow(10,i) ) % 10;
+        after_array[i] = Math.floor( after / Math.pow(10,i) ) % 10;
+
+
+        if( before_array_init[i] == 5 ) {
+            fulfilled_init[i] = 1;
+        } else {
+            fulfilled_init[i] = 0;
+        }
+
+
+        before_sum_init += before_array_init[i] - 1;
+        after_sum += after_array[i] -1;
+    }
+
+    var succ = 0;
+    var total_fix = 0;
+
+    for( var i = 0; i < total_try; i++ ) {
+
+        var before_array = [];
+        var fulfilled = [];
+        var before_sum = before_sum_init;
+
+        for( var j = 0; j < 4; j++ ) {
+            before_array[j] = before_array_init[j];
+            fulfilled[j] = fulfilled_init[j];
+        }
+
+        var fix = false;
+        for( var fail = false, isSucc = false; before_sum <= after_sum && !fail && !isSucc; before_sum++) {
+            var onSucc = [false,false,false,false];
+            for( var k = 0; k < 4; k++ ) {
+
+                if( before_array[k] == 5 ) {
+                    fulfilled[k] = 1;
+                } else {
+                    fulfilled[k] = 0;
+                }
+
+                if( before_array[k] > after_array[k]) {
+                    fail = true;
+                } else if(  before_array[k] == after_array[k]) {
+                    onSucc[k] = true;
+                }
+            }
+            if( onSucc[0] && onSucc[1] && onSucc[3] ) {
+                isSucc = true;
+                succ++;
+                break;
+            }
+
+            if( before_array[0] == after_array[0] && before_array[1] == after_array[1] ) {
+                fix = true;
+                if( fulfilled[3] == 1 ) {
+                    before_array[2] = before_array[2] + 1;
+                } else {
+                    before_array[3] = before_array[3] +1;
+                }
+            } else {
+                var available = 4 - fulfilled[0] - fulfilled[1] - fulfilled[2] - fulfilled[3];
+                if( available > 0 ) {
+                    var prob = 1 / available;
+                    const randomNumber = Math.random();
+                    for( var l = 0, ll = 0; l < 4; l++ ) {
+                        if( !fulfilled[l] ) {
+                            if( randomNumber < prob * (ll+1) && randomNumber >= prob * ll ) {
+                                before_array[l] = before_array[l] + 1;
+                            }
+                            ll++;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+        total_fix += fix ? 1 : 0;
+    }
+
+
+    console.log( before + "->" + after +": " +total_try+'번 중 '+ succ+'번 성공');//, 고정횟수:' + total_fix );
+
+
+})
+
+
+}
+  </script>
+
+
+</body>
+</html>

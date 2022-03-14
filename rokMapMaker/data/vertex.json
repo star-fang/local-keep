@@ -1,0 +1,33 @@
+{
+    "camps": {
+        "name": {
+            "eng":"Barbarian Camp","kor":"브롤"
+        },
+        "shape": 0,
+        "width": 20,
+        "color": "#fce205",
+        "vc": 1
+    },
+    "keeps": {
+        "name": {
+            "eng":"Barbarian Keep","kor":"야만인 요새"
+        },
+        "shape": 0,
+        "width": 30,
+        "color": "#e3242b",
+        "vc": 2
+    },
+    "gates": {
+        "name": {
+            "eng":"Gate","kor":"관문"
+        },
+        "vc": 0,
+        "width": 25,
+        "shape": 1,
+        "color": [
+            "#07da63",
+            "#1167ba",
+            "#52307c"
+        ]
+    }
+}

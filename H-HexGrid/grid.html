@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>H-Hex</title>
+  
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/setting.css">
+  <link rel="stylesheet" href="styles/vkey.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="movableDiv">
+  <div id = "mapDiv">
+    <canvas class = "map" id="tileCanvas"></canvas>
+    <canvas hidden class = "map" id="bgCanvas"></canvas>
+    <canvas class = "map" id="gridCanvas"></canvas>
+    <canvas class = "selector" id="gridSelector"></canvas>
+   </div>
+  </div>
+
+   <div class = "footer">
+    <img class = "portrait" src="images/portrait.png">
+    <p class = "footerInfo" id = "terrain">지형</p>
+    <p class = "footerInfo" id = "pos"></p>
+    <input hidden id = "changeMapButton"  type="button">
+   </div>
+
+
+   <div id="settingDiv">
+    <div class="switchcontainer">
+      <p class ='switchTitle'>이동불가 지형</p>
+      <label class="switch">
+        <input id="blockSwitch" type="checkbox">
+        <span class="switchslider round"></span>
+      </label>
+    </div>
+
+    <div class="switchcontainer">
+      <p class ='switchTitle'>건물</p>
+      <label class="switch">
+        <input id="facSwitch" type="checkbox">
+        <span class="switchslider round"></span>
+      </label>
+    </div>
+
+    <div class="switchcontainer">
+      <p class ='switchTitle'>포커스</p>
+      <label class="switch">
+        <input  type="checkbox">
+      </label>
+    </div>
+
+    <input class="input_disable_selection" type="image" id="settingButton" src='images/setting.png' width="30" height="30" value = 'open'>
+  </div>
+
+  <div id ="vkeyDiv">
+
+    <input class="vkey" type="button" id="vkeyW" value = 'W'>
+    <input class="vkey" type="button" id="vkeyA" value = 'A'>
+    <input class="vkey" type="button" id="vkeyS" value = 'S'>
+    <input class="vkey" type="button" id="vkeyD" value = 'D'>
+
+    <input class="input_disable_selection" type="image" id="vkeyButton" src='images/vkey.png' width="30" height="30" value = 'open'>
+  </div>
+
+
+
+
+
+
+   <script src="data.js"></script>
+   <script src = "scripts/modules-scaling.js"></script>
+    <script src="scripts/grid.js"></script>
+
+   
+
+</body>
+</html>

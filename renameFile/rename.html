@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+    </style>
+
+    <span id="desc"></span>
+    <input id="file_input" type="file" name="imgFile" oninput="onUpload()" accept=".png">
+    <br>
+
+    <div hidden id="select">
+    <div>
+        <input type="radio" id="select_rename" name="drone" value="rename" checked>
+        <label for="select_rename">기존 이름 바꾸기</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="select_create" name="drone" value="create">
+        <label for="select_create">새로운 파일 만들기</label>
+      </div>
+    
+    
+    <input id="file_name" type="text" placeholder="새로운 이름 입력">
+    <input id="file_download" type="button" oninput="download()" value="download">
+</div>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+
+        function onUpload() {
+            let input = document.getElementById('file_input');
+            let file = input.files[0];
+            let desc = document.getElementById('desc');
+
+            input.setAttribute('hidden', true);
+
+            desc.innerHTML = `업로드 파일: ${file.name}`;
+
+            let name_input = document.getElementById('file_name');
+            name_input.value = '';
+
+            let download_btn = document.getElementById('file_download');
+            let selectDiv = document.getElementById('select');
+            selectDiv.removeAttribute('hidden');
+            download_btn.onclick = function () {
+
+                let newName = name_input.value;
+
+                if (newName === "") {
+                    alert('이름 입력');
+                } else {
+                    try {
+
+                        if( document.getElementById("select_rename").checked == true ) {
+                            renameFileObj(file, newName);
+                            download(file);
+                        } else {
+                            download( createNewFile( file, newName ));
+                        }
+                        
+                        
+                        
+                        selectDiv.setAttribute("hidden", true);
+                        input.removeAttribute("hidden");
+                        desc.innerHTML = '';
+                        input.value = '';
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                }
+            };
+        }
+
+
+        function download(file) {
+            var link = document.createElement('a');
+            link.download = file.name;
+            link.href = URL.createObjectURL(file);
+            link.click();
+        }
+
+        function renameFileObj(file, newName) {
+            Object.defineProperty(file, 'name', {
+                writable: true,
+                value: newName
+            });
+
+            console.log('파일 이름 변경:', file);
+        }
+
+        function createNewFile( file, newName) {
+            let blob = file.slice(0, file.size, 'image/png');
+            const newFile = new File([blob], newName + '.png', { type: 'image/png' });
+            console.log('새로운 파일 생성:', newFile);
+            return newFile;
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

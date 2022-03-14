@@ -1,0 +1,1182 @@
+[
+    {
+        "id": 1220001,
+        "name": "내가 천하를 저버릴지언정",
+        "unitId": [
+            1100001,
+            1100700
+        ],
+        "passive": [
+            2250460,
+            2250461
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220002,
+        "name": "왕좌지재",
+        "unitId": [
+            1100001,
+            1100021,
+            1100023
+        ],
+        "passive": [
+            2250462,
+            2250463
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220003,
+        "name": "오자양장",
+        "unitId": [
+            1100003,
+            1100015,
+            1100011,
+            1100008,
+            1100014
+        ],
+        "passive": [
+            2250464
+        ],
+        "passiveUnitCount": [
+            3
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220004,
+        "name": "난형난제",
+        "unitId": [
+            1100493,
+            1100491,
+            1100492
+        ],
+        "passive": [
+            2250466,
+            2250487
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220005,
+        "name": "기묘한 우정",
+        "unitId": [
+            1100643,
+            1100422
+        ],
+        "passive": [
+            2250467
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220006,
+        "name": "도원의 맹세",
+        "unitId": [
+            1100606,
+            1100004,
+            1100607
+        ],
+        "passive": [
+            2250468,
+            2250469,
+            2250470
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220007,
+        "name": "촉한의 대들보",
+        "unitId": [
+            1100617,
+            1100614,
+            1100615
+        ],
+        "passive": [
+            2250471
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            4
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220008,
+        "name": "원한과 숙명",
+        "unitId": [
+            1100631,
+            1100414
+        ],
+        "passive": [
+            2250472,
+            2250490,
+            2250489
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            2,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220009,
+        "name": "노장과 명장",
+        "unitId": [
+            1100610,
+            1100608
+        ],
+        "passive": [
+            2250473,
+            2250474
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220010,
+        "name": "괄목상대",
+        "unitId": [
+            1100654,
+            1100652
+        ],
+        "passive": [
+            2250475,
+            2250476
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220011,
+        "name": "군주와 노신",
+        "unitId": [
+            1100650,
+            1100662
+        ],
+        "passive": [
+            2250477
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220012,
+        "name": "칼날의 맹세",
+        "unitId": [
+            1100674,
+            1100669
+        ],
+        "passive": [
+            2250478
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220013,
+        "name": "강동이교",
+        "unitId": [
+            1100469,
+            1100470
+        ],
+        "passive": [
+            2250479
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220014,
+        "name": "고육지계",
+        "unitId": [
+            1100651,
+            1100665
+        ],
+        "passive": [
+            2250480
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            4
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220015,
+        "name": "황건적 토벌군",
+        "unitId": [
+            1100285,
+            1100465,
+            1100428
+        ],
+        "passive": [
+            2250481
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220016,
+        "name": "반 동탁 연합군",
+        "unitId": [
+            1100675,
+            1100701
+        ],
+        "passive": [
+            2250482,
+            2250493,
+            2250491
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            2,
+            1
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220017,
+        "name": "수화불상용",
+        "unitId": [
+            1100611,
+            1100345
+        ],
+        "passive": [
+            2250483,
+            2250494,
+            2250492
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            2,
+            1
+        ],
+        "needString": 100,
+        "statType": [
+            4
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220018,
+        "name": "대도독의 후계자",
+        "unitId": [
+            1100267,
+            1100655
+        ],
+        "passive": [
+            2250484
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220019,
+        "name": "중황태을",
+        "unitId": [
+            1100391,
+            1100720,
+            1100721
+        ],
+        "passive": [
+            2250485,
+            2250488
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220020,
+        "name": "낙신부",
+        "unitId": [
+            1100009,
+            1100726,
+            1100468
+        ],
+        "passive": [
+            2250486
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            4
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220021,
+        "name": "천생배필",
+        "unitId": [
+            1100693,
+            1100018
+        ],
+        "passive": [
+            2250645,
+            2250646,
+            2250647
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220022,
+        "name": "오래 된 인연",
+        "unitId": [
+            1101044,
+            1101045
+        ],
+        "passive": [
+            2250648,
+            2250649,
+            2250650
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 100,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220023,
+        "name": "신기묘산",
+        "unitId": [
+            1100849,
+            1100609
+        ],
+        "passive": [
+            2250651
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220024,
+        "name": "천하장사",
+        "unitId": [
+            1100016,
+            1100852
+        ],
+        "passive": [
+            2250652,
+            2250684
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220025,
+        "name": "불화의 씨앗",
+        "unitId": [
+            1100728,
+            1100383
+        ],
+        "passive": [
+            2250653,
+            2250654,
+            2250655
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 150,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220026,
+        "name": "금석지교",
+        "unitId": [
+            1100674,
+            1100651
+        ],
+        "passive": [
+            2250656
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220027,
+        "name": "황천의 시대",
+        "unitId": [
+            1100739,
+            1100945,
+            1100773,
+            1100947,
+            1100944
+        ],
+        "passive": [
+            2250657,
+            2250658
+        ],
+        "passiveUnitCount": [
+            3,
+            5
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220028,
+        "name": "천하의 흐름을 타고",
+        "unitId": [
+            1100024,
+            1100717
+        ],
+        "passive": [
+            2250659,
+            2250660
+        ],
+        "passiveUnitCount": [
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0
+        ],
+        "needString": 100,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220029,
+        "name": "주군을 위하여",
+        "unitId": [
+            1100660,
+            1100661
+        ],
+        "passive": [
+            2250661
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220030,
+        "name": "부수불공대천",
+        "unitId": [
+            1100627,
+            1100628
+        ],
+        "passive": [
+            2250662
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 150,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220031,
+        "name": "남만의 한 쌍",
+        "unitId": [
+            1100645,
+            1100646
+        ],
+        "passive": [
+            2250663
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220032,
+        "name": "다가올 나날을 위해",
+        "unitId": [
+            1100609,
+            1100483
+        ],
+        "passive": [
+            2250664
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220033,
+        "name": "금슬지락",
+        "unitId": [
+            1100020,
+            1100482
+        ],
+        "passive": [
+            2250665,
+            2250666,
+            2250667
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            2
+        ],
+        "needString": 75,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220034,
+        "name": "해로동혈",
+        "unitId": [
+            1100606,
+            1100478
+        ],
+        "passive": [
+            2250668
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220035,
+        "name": "영웅의 배필",
+        "unitId": [
+            1100867,
+            1100869
+        ],
+        "passive": [
+            2250669,
+            2250670,
+            2250671
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 75,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220036,
+        "name": "사항계",
+        "unitId": [
+            1100782,
+            1100783
+        ],
+        "passive": [
+            2250672
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220037,
+        "name": "서진의 용장",
+        "unitId": [
+            1100304,
+            1100745
+        ],
+        "passive": [
+            2250673
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220038,
+        "name": "노당채의 여걸",
+        "unitId": [
+            1101162,
+            1101164
+        ],
+        "passive": [
+            2250674
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220039,
+        "name": "개국공신",
+        "unitId": [
+            1100006,
+            1100013
+        ],
+        "passive": [
+            2250675
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220040,
+        "name": "장사의 딸",
+        "unitId": [
+            1100476,
+            1101228
+        ],
+        "passive": [
+            2250676,
+            2250677,
+            2250678
+        ],
+        "passiveUnitCount": [
+            0,
+            0,
+            0
+        ],
+        "passiveType": [
+            0,
+            0,
+            1
+        ],
+        "needString": 75,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220041,
+        "name": "최후의 명장",
+        "unitId": [
+            1100655,
+            1100387
+        ],
+        "passive": [
+            2250679
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            1
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220042,
+        "name": "부위자강",
+        "unitId": [
+            1100608,
+            1100749
+        ],
+        "passive": [
+            2250680
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            3
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220043,
+        "name": "백운고비",
+        "unitId": [
+            1100631,
+            1100800
+        ],
+        "passive": [
+            2250681
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220044,
+        "name": "불초지부",
+        "unitId": [
+            1100701,
+            1101163
+        ],
+        "passive": [
+            2250682
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            0
+        ],
+        "statVal": [
+            1
+        ]
+    },
+    {
+        "id": 1220045,
+        "name": "부부자자",
+        "unitId": [
+            1100004,
+            1100620
+        ],
+        "passive": [
+            2250683
+        ],
+        "passiveUnitCount": [
+            0
+        ],
+        "passiveType": [
+            0
+        ],
+        "needString": 75,
+        "statType": [
+            2
+        ],
+        "statVal": [
+            1
+        ]
+    }
+]

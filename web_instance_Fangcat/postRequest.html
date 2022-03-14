@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#send").on('click',function(){
+    //var json = {};
+    //json.uid_enc = 
+    var txt = $("input").val();
+    $.post("http://49.50.175.13/fangcat/login.php", 
+    {uid_enc:txt}, function(result){
+      $("span").html(result);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Start typing a name in the input field below:</p>
+First name:
+
+<input type="text">
+<input type="button" id = "send" value="send">
+
+<p>reuslt: <span></span></p>
+<p>The file used in this example (<a href="demo_ajax_gethint.txt" target="_blank">demo_ajax_gethint</a>) is explained in our Ajax tutorial</p>
+
+</body>
+</html>

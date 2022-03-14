@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rok-Crawler</title>
+  <style> 
+    .edittext {
+      border: none;
+      background: rgba(65, 105, 225, 0.349);
+    }
+  </style>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input class="edittext" type="text" id="edittext1">
+    <input class="cbutton" type="submit" id="button_inquiry" value = "inquiry" onclick="crawling()">
+    <div hidden id = "hidden_save_div">
+    <label for="password">password: </label>
+    <input class="cbutton" type="password" id="pass">
+    <input class="cbutton" type="submit" id="button_save" value = "save" onclick="save()">
+  </div>
+  <br><div id="result">결과</div>
+  <br><form id = "commander_info">
+    <br><label for="edittext_id">ID: </label>
+    <input readonly = "true" class="edittext" type="text" id="edittext_id" name="id">
+    <br><label for="edittext_grade">등급: </label>
+    <input class="edittext" type="text" id="edittext_grade" name="grade">
+    <br><label for="edittext_name">이름: </label>
+    <input class="edittext" type="text" id="edittext_name" name="name">
+    <br><label for="edittext_nickname">별명: </label>
+    <input class="edittext" type="text" id="edittext_nickname" name= "nickname">
+    <br><label for="edittext_gain">획득: </label>
+    <input class="edittext" type="text" id="edittext_gain" name="gain">
+    <br><label for="edittext_civil">문명: </label>
+    <input class="edittext" type="text" id="edittext_civil" name="civil">
+    <br><label for="edittext_spec1">특성1: </label>
+    <input class="edittext" type="text" id="edittext_spec1" name="spec1">
+    <br><label for="edittext_spec2">특성2: </label>
+    <input class="edittext" type="text" id="edittext_spec2" name="spec2">
+    <br><label for="edittext_spec3">특성3: </label>
+    <input class="edittext" type="text" id="edittext_spec3" name="spec3">
+  </form>
+
+  <script type="text/javascript">
+
+window.onload = function() {
+  for( var i = 0; i < 5; i++ ) {
+  $('#commander_info').append(
+    //occLabelDiv.append($('<label class = "label_occ">' + getVertexById(id).name + '</label>'));
+    $('<br><br><label for="edittext_skill' + (i+1) + '_name"> 스킬' + (i+1) + ': </label>'
+    + '<input class="edittext" type="text" id="edittext_skill'+(i+1)+'_name" name="skill'+(i+1)+'_name">'
+    + '<input class="edittext" type="text" id="edittext_skill'+(i+1)+'_condition" name="skill'+(i+1)+'_condition">'
+    + '<input class="edittext" type="text" id="edittext_skill'+(i+1)+'_subject" name="skill'+(i+1)+'_subject">' )
+  );
+  }
+}
+
+
+
+
+
+  function crawling() {
+
+    var number = parseInt($('#edittext1').val());
+
+    if( Number.isInteger(number) ) {
+      $('#result').html('로딩..');
+      var xhr = $.ajax({
+        type: "GET",
+        url: "ROKrawler.php?number="+number,
+        success: function (response) {
+          console.log(response);
+          try {
+            var obj = JSON.parse(response);
+            $('#result').html(obj['status']);
+            if(obj['status']=='success') {
+
+              $('#edittext_id').val(number);
+              $('#edittext_grade').val(obj['grade_eng']);
+              $('#edittext_name').val(obj['name']);
+              $('#edittext_nickname').val(obj['nickname']);
+              $('#edittext_gain').val(obj['gain']);
+              $('#edittext_civil').val(obj['civil']);
+        
+              for( var i = 0; i < 3; i++ ) {
+                $('#edittext_spec'+(i+1)).val(obj['spec'+i]);
+              }
+
+              for( var i = 0; i < 5; i++ ) {
+                $('#edittext_skill'+(i+1)+"_name").val(obj['skill_name'+i]);
+                $('#edittext_skill'+(i+1)+"_condition").val(obj['skill_condition'+i]);
+                $('#edittext_skill'+(i+1)+"_subject").val(obj['skill_subject'+i]);
+              }
+
+
+
+
+              $('#hidden_save_div').removeAttr('hidden');
+            } else {
+              $('#hidden_save_div').attr('hidden',true);
+              $('#commander_info')[0].reset();
+            }
+          } catch(e) {
+            $('#result').html(e);
+            $('#hidden_save_div').attr('hidden',true);
+            $('#commander_info')[0].reset();
+          }
+         
+    },
+    error: function () {
+      $('#result').html('에러다롱');
+      $('#hidden_save_div').attr('hidden',true);
+      $('#commander_info')[0].reset();
+    }
+  });
+} else {
+  $('#result').html('?');
+  $('#hidden_save_div').attr('hidden',true);
+  $('#commander_info')[0].reset();
+}
+  }
+
+function save() {
+  var $form = $('#commander_info');
+  var data = getFormData($form);
+  var curId = data['id'];
+  data['pass'] = $('#pass').val();
+  var json = JSON.stringify(data);
+
+  console.log(data);
+
+  $('#result').html('저장..');
+      var xhr = $.ajax({
+        type: "POST",
+        url: "SaveMysql.php",
+        data: json,
+        success: function (response) {
+          console.log(response);
+
+
+          $('#result').html(response);
+
+          if( response == 'succ' ) {
+              $('#hidden_save_div').attr('hidden',true);
+              $('#commander_info')[0].reset();
+              $('#edittext1').val('');
+              //parseInt(curId)+1
+          }
+          //try {
+          //  var obj = JSON.parse(response);
+          //} catch(e) {
+          //}
+         
+    },
+    error: function () {
+      $('#result').html('에러다롱');
+    }
+  });
+
+
+
+
+}
+
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
+
+
+  </script>
+
+
+</body>
+</html>

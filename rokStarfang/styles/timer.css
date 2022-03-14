@@ -1,0 +1,200 @@
+.base-timer {
+  display: block;
+  margin-top: 10px;
+  position: relative;
+  align-items: center;
+}
+
+.descView {
+  display: table;
+  color: rosybrown;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.base-timer__digits_container {
+  display: table;
+  margin: 0 auto;
+}
+
+.time_part {
+  font-family: 'digital-7';
+}
+
+.time_part.fore {
+  position: relative;
+  top:-20px;
+  color:rgb(255, 0, 0);
+  z-index: 2;
+  height: 20px;
+}
+
+.time_part.back {
+  position: relative;
+  color:rgba(109, 109, 109, 0.3);
+  z-index: 1;
+  height: 20px;
+}
+
+.base-timer__colon_label {
+  text-align: center;
+  align-self: center;
+  display: inline-block;
+  font-size: 32px;
+}
+
+.base-timer__digit_label {
+  text-align: end;
+  display: inline-block;
+  margin: 2px;
+}
+
+.bigTime {
+  font-size: 34px;
+  width: 16px;
+}
+
+
+.smallTime{
+  font-size: 25px;
+  width: 12px;
+}
+
+
+@font-face {
+  font-family: 'digital-7';
+  src: url('../fonts/digital-7.ttf');
+}
+
+.keypad {
+  margin:auto;
+  margin-bottom: 5px;
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+
+.keypad tr td {
+	vertical-align:middle; 
+	text-align:center; 
+  border:1px 0px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+	font-size: 18px;
+  font-weight:bold; 
+	cursor:pointer; 
+	background-color: rgba(255, 255, 255, 0.2);
+  color: balck;
+  transition: all 500ms;
+}
+
+.keypad tr td.keypad_red {
+  background-color: red;
+}
+
+.keypad tr td.keypad_green {
+  background-color:green;
+}
+
+.keypad tr td.keypad_no_background {
+  font-size: 14px;
+  height: 20px;
+  background: none;
+}
+.keypad tr td:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color:#FFFF00;}
+
+.keypad tr td.keypad_no_background:hover {
+  background: none;
+  color: yellowgreen;
+}
+
+.timerSetButton {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0px;
+  color: black;
+  font-size: 10px;
+}
+
+.timerSetButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.vertexVisualizer{
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  align-items: center;
+}
+
+.spin_loader{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 255, 255);
+  border-top: 4px solid rgb(255, 0, 0);
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+}
+
+.vertexDigit{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 12px;
+  stroke: rgba(77, 77, 77, 0.8);
+}
+
+.base-timer__path-remaining {
+  stroke-width: 18px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.blinking{
+  -webkit-animation:blink 0.5s ease-in-out infinite alternate;
+    -moz-animation:blink 0.5s ease-in-out infinite alternate;
+    animation:blink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0.1;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0.1;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0.1;}
+    100% {opacity:1;}
+}

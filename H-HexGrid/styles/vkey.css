@@ -1,0 +1,58 @@
+#vkeyDiv {
+    width: 300px;
+    height: 210px;
+      position:absolute;
+      left: -300px;
+      top: calc(16vh + 20px);
+     background-color: rgba(12, 32, 99, 0.3);
+     border-radius: 0 20px 20px 0;
+      box-shadow: 3px 3px 5px gray;
+      z-index: 11;
+  }
+  
+  #vkeyDiv:hover {
+     background-color: rgba(12, 32, 99, 0.8);
+     z-index: 12;
+  }
+
+  #vkeyButton {
+    position: absolute;
+    left: 295px;
+    top: 20px;
+    width: 6vh;
+    height: 6vh;
+    background-color: coral;
+    opacity: 0.9;
+  }
+  
+  #vkeyButton:hover {
+    width: 7vh;
+    height: 7vh;
+  }
+
+  .vkey {
+      position: absolute;
+      width:80px;
+      height:80px;
+      font-size: 30px;
+  }
+
+  #vkeyW {
+      top:20px;
+      left:80px;
+  }
+
+  #vkeyA {
+      top:110px;
+      left:20px;
+  }
+
+  #vkeyS {
+    top:110px;
+    left:110px;
+}
+
+#vkeyD {
+    top:110px;
+    left:200px;
+}

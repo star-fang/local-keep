@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+ </script>
+  </head>
+   
+  <body>
+    <h1>Welcome</h1>
+    <form id ="tables" action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+    <div class = 'container_vertical'>
+    
+    <div class = 'container_horizontal'>
+    <label for = 'spreadsheetID'>스프레드시트 ID: </label>
+    <input type = 'text' id = 'spreadsheetID'/>
+    </div>
+    
+    <div class = 'container_horizontal'>
+    <label for = 'spreadsheetName'>스프레드시트: </label>
+    <input type = 'text' id = 'spreadsheetName'/>
+    </div>
+    
+    <div class = 'container_horizontal'>
+    <label for = 'sheetName'>현재 시트: </label>
+    <select id = 'sheetName' list="sheets" name="sheet">
+    </select>
+    </div>
+    </div>
+    
+    <button id = 'getSheet' >시트 검색</button>
+    
+    <script>
+    $(window).load( function() {
+    
+    /*
+    function onSpreadsheetLoad(spreadsheet) {
+      console.log( spreadsheet );
+      $('#spreadsheetName').val(spreadsheet.name );
+      $('#spreadsheetID').val(spreadsheet.id );
+      var selectedSheetId = spreadsheet.sheetId;
+      spreadsheet.sheets.forEach( function( sheet ) {
+      $('#sheetName').append( $('<option value="'+sheet.id+'"' +((selectedSheetId == sheet.id)? ' selected' : '') + '>'+ sheet.name + '</option>'));
+      });
+      }
+      
+
+      google.script.run.withSuccessHandler(onSpreadsheetLoad).getCurrentSpreadsheetInfo();
+    
+    */
+
+   loadFromJSON('http://192.168.55.83//fangcat/TableList.php?db=clavis',
+   function(response) {
+       const obj = JSON.parse(response);
+       for( var i = 0; i < obj.length; i++ ) {
+           /*
+           <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        */
+       var tableName = obj[i].table;
+        $('#tables').append(
+            $('<input type = "checkbox" id="label_table'+i+'" name="table'+i+'" value="'+tableName + '">'
+            +'<label for="label_table'+i+'">'+tableName+'</label><br>'));
+        //console.log( + obj[i].lastModified);
+       }
+      
+   }, function() {
+    console.log("error");
+   }
+   );
+    
+    $('#getSheet').on('click',function(e) {
+    
+     function onSuccess(jsonArray) {
+     jsonArray.forEach( function( json ) {
+     console.log(json);
+     $('body').append($('<p>'+JSON.stringify(json)+'</p>'));
+     });
+     
+      }
+      
+      var sheet = $('#sheetName')[0];
+      var selectedSheetText = sheet.options[sheet.selectedIndex].text;
+      console.log( selectedSheetText );
+      google.script.run.withSuccessHandler(onSuccess).toJsonArray($('#spreadsheetID').val(), selectedSheetText );
+     
+    }); // oninput
+   
+    
+    });
+
+    function loadFromJSON(url, done_callback, error_callback) {
+
+var xhr = $.ajax({
+  type: "GET",
+  url: url,
+  success: function (response) {
+    if (done_callback != undefined) {
+      done_callback(response);
+    }
+  },
+  error: function () {
+    if (error_callback != undefined) {
+      error_callback();
+    }
+  }
+});
+};
+</script>
+  </body>
+</html>

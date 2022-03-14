@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>fangcat</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <ul id='variables'></ul>
+
+    <script>
+        window.onload = function () {
+            var keys = Object.keys(window);
+            
+            var count = 0;
+            for (var i in keys) {
+                if (typeof window[keys[i]] != 'function' && window[keys[i]]) {
+                    var symbol = window[keys[i]].__proto__.constructor.name;
+                    if (symbol == 'Object' || symbol == 'Array') {
+                        const objectName = keys[i];
+                        $('#variables').append($('<li>' + objectName + '<input id = "btn_'+objectName+'" type = "button" value = "sync"></input></li>'));
+                        $('#btn_'+objectName).on('click',function(e) {
+                            console.log(objectName,'clicked');
+                            
+                        });
+                        count++;
+                    }
+                }
+            }
+
+            console.log( count + "variables found");
+
+            /*
+            $("#variables").on("click", function (e) {
+                if (e.target && e.target.nodeName == "LI") {
+                    var object = window[e.target.id];
+                    downloadObjectAsJson( object, e.target.id );
+                }
+            });
+            */
+
+        }
+
+        function downloadObjectAsJson(exportObj, exportName) {
+            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+            var downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", exportName + ".json");
+            document.body.appendChild(downloadAnchorNode); // required for firefox
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+
+    </script>
+    <script src="data.js"></script>
+
+</body>
+
+</html>

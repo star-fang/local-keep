@@ -1,0 +1,92 @@
+
+.mapContainer {
+    position: absolute;
+    top:0px;
+    left:0px;
+  }
+  
+  .landCanvas {
+    background-color:black;
+    z-index: 1;
+  }
+
+  .vertexCanvas {
+    z-index: 3;
+  }
+  
+  .map {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .tracker {
+    position: absolute;
+  }
+  
+  .tracker.cursorTracker {
+    z-index: 4;
+    left: 0px;
+    top: 0px;
+  }
+
+  .tracker.vertexTracker {
+    z-index: 3;
+    opacity: 0.7;
+    left: 0px;
+    top: 0px;
+  }
+
+  .tracker.centerTracker {
+    z-index: 5;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+  }
+
+  .tracker.aim {
+    z-index: 4;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    flex: auto;
+    border-radius: 50%;
+    border: 35px solid rgba(0, 0, 0, 0.2);
+    transform: scaleX(-1);
+    overflow: visible;
+  }
+
+  .tracker.axisX {
+    z-index: 3;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .tracker.axisY {
+    z-index: 3;
+    left: 15px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+  }
+
+  .aim__circle {
+    fill: none;
+    stroke: none;
+  }
+
+  .aim__path-elapsed {
+    stroke-width: 10px;
+    stroke: white;
+  }
+  
+
+  
